@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    height: 100%; 
+    overflow: hidden; 
+}
+
+body {
+    background: linear-gradient(#ffd52e, #d6b600 85%);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white; 
+}
+
+.text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px;
+    font-size: 50px;
+}
+
+.countdown {
+    font-family: 'Poppins', sans-serif;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+.social-button {
+    text-decoration: none;
+    background-color: white;
+    color: #333;
+    border: none; 
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    font-size: 20px;
+    transition: transform 0.3s; 
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+}
+
+.confetti {
+    position: absolute;
+    top: -100px;
+}
+
+.confetti:nth-child(100n+2) {
+    animation: animateStart 1.5s ease;
+}
+.confetti:nth-child(100n+4) {
+    animation: animateStart 1.4s ease;
+}
+.confetti:nth-child(1000n+0) {
+    animation: animateStart 1.6s ease;
+}
+
+@keyframes animateStart {
+    0% {
+        top: 100%;
+        left: 50%;
+        box-shadow: 0 0 5px #000;
+    }
+    100% {
+        transform: rotate3d(1,1,1,360deg);
+        top: -100px;
+    }
+}
+
+.confetti:nth-child(100n+0) {
+    animation: animateThree 3.4s linear infinite;
+}
+.confetti:nth-child(100n+1) {
+    animation: animate 4s linear infinite;
+}
+.confetti:nth-child(100n+3) {
+    animation: animate 4.2s linear infinite;
+}
+.confetti:nth-child(100n+5) {
+    animation: animateTwo 3s linear infinite;
+}
+.confetti:nth-child(100n+6) {
+    animation: animateTwo 2.9s linear infinite;
+}
+.confetti:nth-child(100n+7) {
+    animation: animate 2.8s linear infinite;
+}
+.confetti:nth-child(100n+8) {
+    animation: animate 2.7s linear infinite;
+}
+.confetti:nth-child(100n+9) {
+    animation: animate 2.6s linear infinite;
+}
+.confetti:nth-child(100n+10) {
+    animation: animate 2.5s linear infinite; 
+}
+
+@keyframes animate {
+    0% {
+        top: -100px;
+    }
+    100% {
+        transform: rotate3d(1,1,1,360deg);
+        top: 100%;
+    }
+}
+@keyframes animateTwo {
+    0% {
+        top: -100px;
+    }
+    100% {
+        transform: rotate3d(0,0,1,360deg);
+        top: 100%;
+    }
+}
+@keyframes animateThree {
+    0% {
+        top: -100px;
+    }
+    100% {
+        transform: rotate3d(0,1,0,360deg);
+        top: 100%;
+    }
+}
